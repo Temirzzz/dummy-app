@@ -17,6 +17,8 @@ const CountBlock = () => {
       stGeneralRad="5px"
       stGeneralMinWidth="350px"
       stGeneralMinHeight="400px"
+      stGeneralMediaMardg="20px 0"
+      stGeneralMediaWidth="280px"
     >
       <GeneralBlock
         stGeneralWidth="200px"
@@ -24,6 +26,8 @@ const CountBlock = () => {
         stGeneralBack="#708090"
         stGeneralMargin="30px 0 30px"
         stGeneralRad="5px"
+        stGeneralMediaWidth="220px"
+        stGeneralMediaMardg="20px 0"
       >
         {data}
       </GeneralBlock>

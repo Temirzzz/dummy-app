@@ -12,6 +12,10 @@ export const Nav = styled.nav`
   position: absolute;
   top: 50px;
   left: 30px;
+  @media (max-width: 990px) {
+    margin-top: 30px;
+    position: static;
+  }
 `;
 
 export const Ul = styled.ul`
@@ -35,7 +39,7 @@ export const List = styled.li`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 35px;
-  color: black;
+  color: ${(props) => props.stlinkcolor || "black"};
 `;
 
 //Button
@@ -48,9 +52,58 @@ export const StyledButton = styled.button`
   font-size: 18px;
   cursor: pointer;
   margin: ${(props) => props.stBtnMargin || "0"};
+  color: ${(props) => props.stBtnColor || "black"};
   :hover {
     box-shadow: 10px 5px 5px gray;
   }
+`;
+
+//Form
+export const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  min-height: 120px;
+  border-radius: 5px;
+  border: 1px solid darkcyan;
+  background: none;
+  margin: ${(props) => props.stFormMargin || "0"};
+  padding: ${(props) => props.stFormPadding || "0"};
+  @media (max-width: 768px) {
+    min-width: 280px;
+  }
+`;
+
+export const StyledInput = styled.input`
+  min-width: 250px;
+  max-width: 320px;
+  width: 100%;
+  height: 45px;
+  border: 1px solid darkcyan;
+  background: none;
+  padding-left: 10px;
+  margin: ${(props) => props.stInpMargin || "0"};
+  ::-webkit-input-placeholder {
+    color: darkcyan;
+  }
+  :focus {
+    ::-webkit-input-placeholder {
+      color: blue;
+      padding-top: 10px;
+    }
+  }
+  @media (max-width: 768px) {
+    min-width: 240px;
+  }
+`;
+
+//Error Messages
+export const ErrorMessage = styled.span`
+  position: relative;
+  top: -15px;
+  text-align: left;
+  font-size: 12px;
+  color: red;
 `;
 
 //General Block
@@ -59,7 +112,7 @@ export const GeneralBlock = styled.div`
   display: ${(props) => props.stGeneralDisplay || "flex"};
   flex-direction: ${(props) => props.stGeneralDirect || "row"};
   flex-wrap: ${(props) => props.stGeneralWrap || "nowrap"};
-  justify-content: ${(props) => props.stGeneralJusth || "center"};
+  justify-content: ${(props) => props.stGeneralJust || "center"};
   align-items: ${(props) => props.stGeneralAlign || "center"};
   width: ${(props) => props.stGeneralWidth || "auto"};
   height: ${(props) => props.stGeneralHeight || "auto"};
@@ -79,5 +132,11 @@ export const GeneralBlock = styled.div`
   text-align: ${(props) => props.stGeneralTextAl || "center"};
   :hover {
     box-shadow: ${(props) => props.stGeneralHover || "350px"};
+  }
+  @media (max-width: 768px) {
+    width: ${(props) => props.stGeneralMediaWidth || "auto"};
+    min-width: ${(props) => props.stGeneralMediaMinW || "auto"};
+    margin: ${(props) => props.stGeneralMediaMardg || "0"};
+    align-items: ${(props) => props.stGeneralMediaAlign || "center"};
   }
 `;

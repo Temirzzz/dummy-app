@@ -1,11 +1,10 @@
 import Posts from "../../components/Posts/Posts";
-import { Title } from "../../styled-components";
+import { GeneralBlock } from "../../styled-components";
 
 export const PostsPage = () => {
   return (
-    <>
-      <Title stTitleMargin="25px 0 0 0 ">Here You can see posts!</Title>
+    <GeneralBlock stGeneralWrap="wrap">
       <Posts />
-    </>
+    </GeneralBlock>
   );
 };

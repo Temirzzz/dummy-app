@@ -11,6 +11,8 @@ const Post = ({ title, body }) => {
       stGeneralBorder="1px solid darkcyan"
       stGeneralRad="5px"
       stGeneralHover="10px 5px 5px gray"
+      stGeneralMediaWidth="100%"
+      stGeneralMediaMardg="0 0 10px 0"
     >
       <h3>{title}</h3>
       <p>{body}</p>

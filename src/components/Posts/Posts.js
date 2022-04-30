@@ -13,12 +13,20 @@ const Posts = () => {
     <GeneralBlock
       stGeneralDirect="column"
       stGeneralAlign="center"
-      stGeneralJusth="center"
+      stGeneralJust="center"
     >
-      <Button stBtnMargin="35px 0 5px 0 " onClick={() => dispatch(getPosts())}>
+      <Button
+        stBtnMargin="35px 0 5px 0"
+        stBtnColor="darkcyan"
+        onClick={() => dispatch(getPosts())}
+      >
         Fetch
       </Button>
-      <Button stBtnMargin="0 0 30px 0 " onClick={() => dispatch(hidePosts())}>
+      <Button
+        stBtnMargin="0 0 30px 0"
+        stBtnColor="darkcyan"
+        onClick={() => dispatch(hidePosts())}
+      >
         Unfetch
       </Button>
       {posts.data ? (
@@ -33,6 +41,7 @@ const Posts = () => {
           stGeneralRad="5px"
           stGeneralColor="#fff"
           stGeneralSize="24px"
+          stGeneralMediaWidth="280px"
         >
           No Posts yet!
         </GeneralBlock>
